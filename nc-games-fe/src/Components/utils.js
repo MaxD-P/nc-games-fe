@@ -10,3 +10,9 @@ export function fetchAllReviews(){
     })
 }
 
+export function fetchSingleReview(input){
+    return gamesApi.get(`/reviews/${input}`).then((res) => {
+        return res.data
+    })
+}
+
