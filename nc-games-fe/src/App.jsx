@@ -4,6 +4,7 @@ import Nav from './Components/nav'
 import Home from './Components/home'
 import AllReviews from './Components/All-Reviews'
 import SingleReview from './Components/Single-Review'
+import ReviewComments from './Components/Review-Comments'
 
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <Route path="/" element={<Home/>}/>
       <Route path="/reviews" element={<AllReviews/>}/>
       <Route path="/reviews/:review_id" element={<SingleReview/>}/>
+      <Route path="/reviews/:review_id/comments" element={<ReviewComments/>}/>
       </Routes>
     </>
     </BrowserRouter>    

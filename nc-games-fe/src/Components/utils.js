@@ -10,9 +10,21 @@ export function fetchAllReviews(){
     })
 }
 
-export function fetchSingleReview(input){
-    return gamesApi.get(`/reviews/${input}`).then((res) => {
+export function fetchSingleReview(reviewId){
+    return gamesApi.get(`/reviews/${reviewId}`).then((res) => {
         return res.data
+    })
+}
+
+export function fetchReviewComments(reviewId){
+    return gamesApi.get(`/reviews/${reviewId}/comments`).then((res) => {
+        return res.data
+    })
+}
+
+export function fetchCategories() {
+    return gamesApi.get(`/categories`).then((res) => {
+        return res.data.categories
     })
 }
 

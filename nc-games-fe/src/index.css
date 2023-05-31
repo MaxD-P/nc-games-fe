@@ -68,7 +68,7 @@ button:focus-visible {
   }
 }
 .review-card{
-  border: 2px solid green;
+  border: 2px solid #28b362;
   padding: 10px;
   margin-bottom: 10px;
 }
@@ -85,4 +85,55 @@ button:focus-visible {
   flex-direction: column;
   justify-content: space-between;
   padding-left: 10px;
+}
+.comment-box {
+  background-color: rgb(202, 231, 240);
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.comment-user {
+  font-weight: bold;
+}
+
+.comment-body {
+  margin-top: 5px;
+}
+
+.comment-date{
+  font-weight:lighter;
+  position:relative;
+}
+.category-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.category-box {
+  flex: 1 1 200px;
+  background-color: #a8b1f3;
+  border: 1px solid #808df6;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.category-box h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.review-link {
+  flex: 200px;
+  background-color: #2ecc71;
+  border: 1px solid #219150;
+  border-radius: 8px;
+  padding: 20px;
+  color: #213547;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.review-header{
+  margin-bottom: 30px;
 }
