@@ -28,3 +28,9 @@ export function fetchCategories() {
     })
 }
 
+export function updateReviewVotes(reviewId){
+    return gamesApi.patch(`/reviews/${reviewId}`, {inc_votes: 1})
+    .then((res) => {
+        return res.data;
+    })
+}

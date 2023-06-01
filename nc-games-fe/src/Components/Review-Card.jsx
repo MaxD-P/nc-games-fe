@@ -1,6 +1,6 @@
 import React from "react";
 
-const ReviewCard = ( { review, showCommentCount = true }) => {
+const ReviewCard = ( { review, voteState, showCommentCount = true }) => {
     const { title, designer, owner, review_img_url, category, created_at, votes, comment_count } = review;
 
     const formattedDate = new Date(created_at).toLocaleDateString();
@@ -25,7 +25,7 @@ const ReviewCard = ( { review, showCommentCount = true }) => {
             <strong>Review Date:</strong> {formattedDate}
           </p>
         </section>
-        <p className="review-votes">Votes: {votes}</p>
+        <p className="review-votes">Votes: {votes + voteState}</p>
         {showCommentCount && <p className="review-comments">Comments: {comment_count}</p>}
       </article>
     );
