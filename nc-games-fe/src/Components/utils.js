@@ -45,7 +45,7 @@ export function postComment(reviewId, newComment){
     .then((res) => {
         console.log(username, body, votes, "body in the utils")
         console.log(res, "the res")
-        res
+        return res.data
     })
     .catch((err)=> {
         console.log("postcomment function error", err)

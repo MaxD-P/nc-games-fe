@@ -21,10 +21,7 @@ const CreateComment = ({review_id, setComments}) => {
     postComment(review_id, newCommentTemplate)
     .then(() => {
         setComments((current) => {
-            if(current && current.comments){
-                return {...current, comments: [newCommentTemplate, ...current.comments]};
-            } else {
-                return {comments: [newCommentTemplate]};
+                return {...current, comments: [newCommentTemplate, ...current.comments]
             }
         })
     })
