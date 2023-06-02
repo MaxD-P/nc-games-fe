@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { fetchSingleReview } from "./utils";
 import ReviewCard from "./Review-Card";
 import ReviewComments from "./Review-Comments";
-import VoteButtons from "./Vote-On-Review";
+import VoteButton from "./Vote-Button";
 
 export const SingleReview = () => {
     const {review_id} = useParams()
@@ -24,7 +24,7 @@ export const SingleReview = () => {
                 <h1>Review:</h1>
     <section className="single-review">
         <ReviewCard review={review.review} voteState={votes} showCommentCount={false}/>
-        <VoteButtons reviewId={review.review.review_id} votes={votes} setVotes={setVotes} />
+        <VoteButton reviewId={review.review.review_id} votes={votes} setVotes={setVotes} />
     </section>
     <ReviewComments reviewId={review.review.review_id} />
         </>

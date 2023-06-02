@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { updateReviewVotes } from './utils';
 
-const VoteButtons = ({ reviewId, setVotes }) => {
+const VoteButton = ({ reviewId, setVotes }) => {
     const [voteUnSuccessful, setVoteUnSuccessful] = useState(false)
 
     const handleVote = (e) => {
@@ -14,16 +14,17 @@ const VoteButtons = ({ reviewId, setVotes }) => {
         .catch((err) => {
             setVoteUnSuccessful(true)
             e.target.disabled = false
+        setVotes((currentValue) => currentValue -1 )
                   })
       };
 
         return (
         <div>
             <button onClick={handleVote} >Upvote</button>
-            {voteUnSuccessful && <p>Your vote was unsuccessful! Please refresh the page to try again.</p>}
+            {voteUnSuccessful && <p>Your vote was unsuccessful! Please try again.</p>}
         </div>
     )
 }
 
 
-export default VoteButtons
+export default VoteButton
