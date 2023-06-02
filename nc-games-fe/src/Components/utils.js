@@ -34,3 +34,20 @@ export function updateReviewVotes(reviewId){
         return res.data;
     })
 }
+
+export function postComment(reviewId, newComment){
+    const { username, body, votes} = newComment
+    return gamesApi.post(`/reviews/${reviewId}/comments`, {
+        username: username,
+        body: body,
+        votes: votes,
+    })
+    .then((res) => {
+        console.log(username, body, votes, "body in the utils")
+        console.log(res, "the res")
+        res
+    })
+    .catch((err)=> {
+        console.log("postcomment function error", err)
+    })
+}

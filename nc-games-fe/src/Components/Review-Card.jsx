@@ -1,7 +1,7 @@
 import React from "react";
 
 const ReviewCard = ( { review, voteState, showCommentCount = true }) => {
-    const { title, designer, owner, review_img_url, category, created_at, votes, comment_count } = review;
+    const { title, designer, owner, review_body, review_img_url, category, created_at, votes, comment_count } = review;
 
     const formattedDate = new Date(created_at).toLocaleDateString();
 
@@ -11,6 +11,7 @@ const ReviewCard = ( { review, voteState, showCommentCount = true }) => {
         <img src={review_img_url} alt={title} className="review-image" />
         </figure>
         <h2 className="review-title">{title}</h2>
+        <p className="review-body">{review_body}</p>
         <section className="review-details">
           <p>
             <strong>Game Designer:</strong> {designer}
