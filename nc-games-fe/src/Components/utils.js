@@ -40,7 +40,6 @@ export function postComment(reviewId, newComment){
     return gamesApi.post(`/reviews/${reviewId}/comments`, {
         username: username,
         body: body,
-        votes: votes,
     })
     .then((res) => {
         console.log(username, body, votes, "body in the utils")
